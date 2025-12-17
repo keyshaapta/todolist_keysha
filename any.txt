@@ -1,0 +1,5 @@
+ $query = mysqli_query($koneksi,"SELECT t.*, c.category  AS nama_kategori
+            FROM todo t
+            LEFT JOIN category c ON t.id_category = c.id_category
+            WHERE id_user = '$id_user'
+            ORDER BY t.id_todo DESC");
